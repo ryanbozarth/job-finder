@@ -13,7 +13,7 @@ const SLIDE_DATA = [
 class WelcomeScreen extends Component {
   state = { token: null };
 
-  async componentWillMount() {
+  async componentDidMount() {
     let token = await AsyncStorage.getItem('fb_token');
 
     if (token) {
